@@ -5,6 +5,7 @@ const geoCode = require("./utils/geoCode");
 const forcast = require("./utils/forcast");
 
 const app = express();
+const port = process.env.PORT || 8000;
 
 const staticPath = path.join(__dirname, "../public");
 const templatePath = path.join(__dirname, "../templates/views");
@@ -98,6 +99,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(8000, () => {
-  console.log("server is up for runing");
+app.listen(port, () => {
+  console.log("server is up for runing" + port);
 });
