@@ -15,7 +15,7 @@ const forcast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        `${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degree out. But it feel like ${body.current.feelslike} degree and cloud cover percentages is ${body.current.cloudcover} % `
+        `${body.current.weather_descriptions[0]}, It is currently ${body.current.temperature} degree out, But it feel like ${body.current.feelslike} degree, ${body.current.cloudcover} % cloud cover, ${body.current.humidity} % of Humidity, Wind speed is ${body.current.wind_speed}`
       );
     }
   });

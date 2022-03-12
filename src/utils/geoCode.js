@@ -10,7 +10,7 @@ const geoCode = (address, callback) => {
     if (error) {
       callback("Connection error! Please Check your connection!", undefined);
     } else if (body.features.length === 0) {
-      callback("Something went wrong!!!", undefined);
+      callback("Unknown location", undefined);
     } else {
       callback(undefined, {
         latitude: body.features[0].center[1],
