@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-js-application
+  labels:
+    app: node-js-application
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-js-application
+  template:
+    metadata:
+      labels:
+        app: node-js-application
+    spec:
+      containers:
+      - name: nodejs-app
+        image: adograbhi/cloudpoint:latest
+        ports:
+        - containerPort: 8000
+
